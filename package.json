@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "backend:build": "tsc -p backend/tsconfig.build.json",
+    "backend:start": "node backend/dist/server.js"
   },
   "prisma": {
     "schema": "backend/prisma/schema.prisma"
