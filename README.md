@@ -1,6 +1,4 @@
-# LeaseSphere Web Platform
-
-Welcome OWOW TRAIL Assignment
+# Welcome OWOW TRAIL Assignment
 
 ---
 
