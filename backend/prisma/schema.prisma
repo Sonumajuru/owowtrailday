@@ -20,6 +20,7 @@ model User {
   Options         User_Options
   Email           String              @unique(map: "Email") @db.VarChar(50)
   PasswordHash    String?              @db.Char(60)
+  PasswordSalt    String?              @db.Char(60)
   ProfilePicture  String?             @db.VarChar(255)
   PhoneNumber     String?             @db.VarChar(20)
   Optional        String?             @db.VarChar(255)

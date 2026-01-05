@@ -8,14 +8,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Load .env from backend folder
+// Load .env
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
-
-// FIXME: For debugging, remove in production
-console.log('Loaded env vars:');
-console.log('DB_HOST:', process.env.DB_HOST);
-console.log('DB_USER:', process.env.DB_USER);
-console.log('DB_NAME:', process.env.DB_NAME);
 
 // --------------------
 // Types

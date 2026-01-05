@@ -5,6 +5,7 @@ export interface User {
   Options: UserOptions;
   Email: string;
   PasswordHash?: string | null;
+  PasswordSalt?: string | null;
   ProfilePicture?: string | null;
   PhoneNumber?: string | null;
   Optional?: string | null;
@@ -21,6 +22,7 @@ export interface UserDTO {
   Email: string;
   ProfilePicture?: string;
   PhoneNumber?: string;
+  Optional?: string;
 }
 
 export enum UserRole {
