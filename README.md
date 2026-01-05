@@ -16,33 +16,60 @@ This project uses **Create next-app**. Follow the steps below to set up your env
 | `DB_USER`     | Database user                                                    |
 | `DB_PASSWORD` | Password for the database user                                   |
 | `DB_PORT`     | Port where the database is running                               |
-| `API_URL`     | Base URL for API routes (e.g., `http://localhost:3000/api/v1`)   |
+| `API_URL`     | Base URL for API routes (e.g., `http://localhost:3001/api/v1`)   |
 | `TOKEN_KEY`   | Alphanumeric secret key for signing tokens                       |
 
 ---
 
-### How to run the tests:
-
-From repo root:
-
-```bash
-run all tests: npx jest
-```
-
 ### Installing Dependencies
 
-Run the following command to install all necessary packages:
+From repo root:
 
 ```bash
 npm install
 ```
 
----
+### Run Locally (Backend)
 
-Run, development server:
+From repo root:
+
+```bash
+npx tsx backend/server.ts
+```
+
+The API will be available at `http://localhost:3001/api/v1` unless you set a different `PORT`.
+
+### Run Locally (Frontend)
 
 ```bash
 yarn dev
+```
+
+### How to Run Tests
+
+From repo root:
+
+```bash
+npx jest
+```
+
+### Run with Docker (API + MySQL)
+
+From repo root:
+
+```bash
+docker compose up --build
+```
+
+The API will be available at `http://localhost:3001/api/v1`.
+
+### If you must run `server.js`
+
+To build and run `server.js` locally:
+
+```bash
+npm run backend:build
+npm run backend:start
 ```
 
 ## 🧱 Prisma Commands (Full Reference)

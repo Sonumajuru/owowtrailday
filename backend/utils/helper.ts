@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import type { User } from '../modal/index';
 
 export function GenerateAccessToken(user: User, userId?: string): string {

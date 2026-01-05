@@ -1,0 +1,25 @@
+services:
+  db:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456789
+      MYSQL_DATABASE: OwowTrailday
+    volumes:
+      - db_data:/var/lib/mysql
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    env_file:
+      - backend/.env
+    environment:
+      DB_HOST: db
+      DB_PORT: 3306
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+
+volumes:
+  db_data:

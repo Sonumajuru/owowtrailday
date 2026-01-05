@@ -1,5 +1,5 @@
 -- CreateTable
-CREATE TABLE `User` (
+CREATE TABLE `Users` (
     `UserID` CHAR(36) NOT NULL DEFAULT (uuid()),
     `Name` VARCHAR(255) NULL,
     `Role` ENUM('User', 'Guest') NOT NULL,
@@ -11,6 +11,8 @@ CREATE TABLE `User` (
     `IsDeleted` BOOLEAN NULL DEFAULT false,
     `CreatedAt` TIMESTAMP(0) NULL DEFAULT CURRENT_TIMESTAMP(0),
     `ModifiedAt` TIMESTAMP(0) NULL DEFAULT CURRENT_TIMESTAMP(0),
+    `PasswordHash` CHAR(60) NULL,
+    `PasswordSalt` CHAR(60) NULL,
 
     UNIQUE INDEX `Email`(`Email`),
     PRIMARY KEY (`UserID`)

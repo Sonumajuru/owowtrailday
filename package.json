@@ -6,12 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "backend:build": "tsc -p backend/tsconfig.build.json",
+    "backend:start": "node backend/dist/server.js"
+  },
+  "prisma": {
+    "schema": "backend/prisma/schema.prisma"
   },
   "dependencies": {
     "@prisma/adapter-pg": "^7.2.0",
     "@prisma/client": "^7.2.0",
     "@types/pg": "^8.16.0",
+    "bcryptjs": "^3.0.3",
     "concurrently": "^8.0.1",
     "cors": "^2.8.5",
     "date-fns": "^4.1.0",
@@ -33,6 +39,7 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
     "@types/bcrypt": "^6.0.0",
+    "@types/bcryptjs": "^3.0.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.5",
     "@types/jest": "^30.0.0",
