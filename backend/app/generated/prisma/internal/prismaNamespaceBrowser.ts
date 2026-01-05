@@ -81,7 +81,9 @@ export const UserScalarFieldEnum = {
   Optional: 'Optional',
   IsDeleted: 'IsDeleted',
   CreatedAt: 'CreatedAt',
-  ModifiedAt: 'ModifiedAt'
+  ModifiedAt: 'ModifiedAt',
+  PasswordHash: 'PasswordHash',
+  PasswordSalt: 'PasswordSalt'
 } as const
 
 export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
@@ -109,7 +111,9 @@ export const UserOrderByRelevanceFieldEnum = {
   Email: 'Email',
   ProfilePicture: 'ProfilePicture',
   PhoneNumber: 'PhoneNumber',
-  Optional: 'Optional'
+  Optional: 'Optional',
+  PasswordHash: 'PasswordHash',
+  PasswordSalt: 'PasswordSalt'
 } as const
 
 export type UserOrderByRelevanceFieldEnum = (typeof UserOrderByRelevanceFieldEnum)[keyof typeof UserOrderByRelevanceFieldEnum]

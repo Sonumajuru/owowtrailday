@@ -1,6 +1,6 @@
 import type { Response } from 'express';
 import type { RowDataPacket, ResultSetHeader } from 'mysql2/promise';
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import type { User } from '../modal/index';
 import { withConnection, withRetry } from '../middleware/dbHelpers';
 import { ComparePasswords, GenerateAccessToken } from '../utils/helper';
