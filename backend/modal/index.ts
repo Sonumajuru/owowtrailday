@@ -1,3 +1,3 @@
-import { User } from './model';
+import { User, UserDTO } from './model';
 
-export type { User };
+export type { User, UserDTO };
